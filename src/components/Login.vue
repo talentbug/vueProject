@@ -1,11 +1,14 @@
 <template>
   <div class="login-container">
+    
     <!-- 登录框 -->
     <div class="login-box">
+
       <!-- logo区域 -->
       <div class="logo">
         <img src="../assets/logo.png" alt="">
       </div>
+
       <!-- 登录表单 -->
       <el-form :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
         <el-form-item prop="username">
@@ -21,8 +24,8 @@
         <!-- 按钮组 -->
       <el-row>
         <el-col>
-          <el-button type="primary">登录</el-button>
-          <el-button type="info">重置</el-button>
+          <el-button type="primary" @click="login">登录</el-button>
+          <el-button type="info" @click="reset">重置</el-button>
         </el-col>
       </el-row>
       </el-form>
